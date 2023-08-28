@@ -1,0 +1,27 @@
+{
+  "appenders": {
+    "console": {
+      "type": "console"
+    },
+    "system": {
+      "type": "dateFile",
+      "filename": "logs/system.log",
+      "pattern": "-yyyy-MM-dd"
+    },
+    "error": {
+      "type": "dateFile",
+      "filename": "logs/error.log",
+      "pattern": "-yyyy-MM-dd"
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": ["console", "system"],
+      "level": "all"
+    },
+    "error": {
+      "appenders": ["console", "error"],
+      "level": "warn"
+    }
+  }
+}
